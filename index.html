@@ -60,7 +60,7 @@ body{background:radial-gradient(1200px 800px at 80% 10%,#0d2147 0%,transparent 6
 .kicker{font:600 15px/1 var(--mono);letter-spacing:.22em;text-transform:uppercase;color:var(--cyan);display:flex;align-items:center;gap:14px}
 .kicker::before{content:"";width:34px;height:2px;background:linear-gradient(90deg,var(--cyan),transparent)}
 h1,h2{font-family:var(--display);font-weight:700;letter-spacing:-.025em}
-h2{font-size:52px;line-height:1.06;margin-top:16px;max-width:1300px;
+h2{font-size:47px;line-height:1.08;margin-top:16px;max-width:1420px;
   background:linear-gradient(180deg,#fff 30%,#a9c3ee 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
 .grad{background:linear-gradient(100deg,var(--cyan),var(--blue) 45%,var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
 .mut{color:var(--mut)}
@@ -336,13 +336,13 @@ h2{font-size:52px;line-height:1.06;margin-top:16px;max-width:1300px;
 .linkcard .ico{width:72px;height:72px;border-radius:20px}
 .linkcard .ico svg{width:34px;height:34px}
 .linkcard small{font:600 13px/1 var(--mono);letter-spacing:.22em;color:var(--cyan)}
-.linkcard a,.linkcard .ph{display:block;font:600 30px/1.25 var(--display);color:#fff;margin-top:12px;text-decoration:none;word-break:break-all}
+.linkcard a,.linkcard .ph{display:block;font:600 27px/1.25 var(--display);color:#fff;margin-top:12px;text-decoration:none;word-break:break-all}
 .linkcard a:hover{text-decoration:underline;text-decoration-color:var(--cyan)}
 .linkcard .ph{color:#fde68a;border:1.5px dashed rgba(250,204,21,.6);padding:10px 16px;border-radius:12px;display:inline-block;font-size:24px}
 .linkcard .cta{margin-left:auto;flex:none;font:600 15px/1 var(--mono);color:#04121f;background:linear-gradient(90deg,var(--cyan),#7dd3fc);
   padding:16px 22px;border-radius:14px;cursor:pointer;border:0;box-shadow:0 10px 30px -8px rgba(56,214,255,.7)}
-.phases{position:absolute;left:90px;right:90px;top:440px;display:grid;grid-template-columns:repeat(4,1fr);gap:34px;perspective:1400px}
-.phase{height:330px;padding:28px 26px;display:flex;flex-direction:column;position:relative}
+.phases{position:absolute;left:90px;right:90px;top:425px;display:grid;grid-template-columns:repeat(4,1fr);gap:34px;perspective:1400px}
+.phase{height:340px;padding:28px 26px;display:flex;flex-direction:column;position:relative}
 .phase .ph{font:700 13px/1 var(--mono);letter-spacing:.22em;color:var(--cyan)}
 .phase .num{font:700 78px/1 var(--display);letter-spacing:-.05em;margin-top:18px;transform:translateZ(50px)}
 .phase h3{font-size:26px;margin-top:8px}
@@ -372,6 +372,61 @@ h2{font-size:52px;line-height:1.06;margin-top:16px;max-width:1300px;
 .hud .keys kbd{font:inherit;padding:3px 6px;border-radius:5px;border:1px solid var(--line);color:var(--mut);margin:0 2px}
 .progress{position:fixed;left:0;top:0;height:3px;z-index:6;background:linear-gradient(90deg,var(--cyan),var(--violet));box-shadow:0 0 14px var(--cyan);transition:width .8s var(--ease)}
 
+
+/* ---------- evolución ---------- */
+.evo{position:absolute;left:90px;right:90px;top:225px;display:grid;grid-template-columns:repeat(4,1fr);gap:34px;perspective:1600px}
+.evo .card{height:300px;padding:28px 26px;position:relative}
+.evo .ph{font:700 13px/1 var(--mono);letter-spacing:.2em;color:var(--cyan)}
+.evo h3{font-size:25px;margin-top:16px;transform:translateZ(30px)}
+.evo p{font-size:16.5px}
+.evo .final{border-color:rgba(139,92,246,.55);background:linear-gradient(160deg,rgba(139,92,246,.22),rgba(56,214,255,.05))}
+.evo .chev{position:absolute;right:-31px;top:50%;margin-top:-13px;width:26px;height:26px;z-index:3}
+.evo .chev svg{width:26px;height:26px;stroke:var(--cyan);fill:none;stroke-width:2.4;filter:drop-shadow(0 0 6px var(--cyan));animation:nudge 1.4s ease-in-out infinite}
+.adj{position:absolute;left:90px;right:90px;top:560px;padding:26px 32px}
+.adj h3{color:#fde68a;font-size:22px}
+.adj ul{list-style:none;margin-top:12px}
+.adj li{position:relative;padding:7px 0 7px 26px;font-size:17px;line-height:1.45;color:#c7d5ee}
+.adj li::before{content:"";position:absolute;left:4px;top:16px;width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 10px var(--cyan)}
+.adj li b{color:#fff}
+/* ---------- tablas ---------- */
+.tblwrap{position:absolute;left:90px;right:90px;top:215px;padding:0;overflow:hidden}
+.tbl{width:100%;border-collapse:collapse;font-size:16px}
+.tbl th{font:600 12.5px/1.2 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);text-align:left;padding:16px 18px;background:rgba(56,214,255,.08);border-bottom:1px solid rgba(56,214,255,.25)}
+.tbl td{padding:12px 18px;border-top:1px solid var(--line);color:#c7d5ee;line-height:1.38;vertical-align:middle}
+.tbl tr:first-child td{border-top:0}
+.tbl tbody tr{transition:background .25s}
+.tbl tbody tr:hover{background:rgba(56,214,255,.06)}
+.tbl td.r{font:600 15px/1.3 var(--mono);color:#bdeeff;white-space:nowrap}
+.tbl td b{color:#fff;font-weight:600}
+.tbl .crit{color:#fda4af;font-weight:700}
+.tnote{position:absolute;left:90px;right:90px;font-size:15.5px;color:var(--mut);font-style:italic}
+/* ---------- gráficas ---------- */
+.s5 .arc{top:222px}
+.s5 .metric{height:205px;padding:24px 26px}
+.s5 .metric .n{font-size:76px}
+.s5 .metric .l{font-size:18px}
+.charts{position:absolute;left:90px;right:90px;top:462px;display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.chart{height:360px;padding:24px 28px}
+.chart h3{font-size:20px}
+.chart svg{display:block;margin-top:6px}
+.bar3d{transform:scaleY(0);transform-box:fill-box;transform-origin:50% 100%;transition:transform 1.4s var(--ease)}
+.slide.active .bar3d{transform:scaleY(1);transition-delay:1s}
+.slide.active .bar3d.b2{transition-delay:1.25s}
+.ax{font:500 14px var(--sans);fill:#8fa3c6}
+.val{font:700 22px var(--display);fill:#fff}
+.seg{fill:none;stroke-width:42;stroke-dasharray:0 691.15;transition:stroke-dasharray 1.3s var(--ease)}
+.slide.active .seg{stroke-dasharray:var(--len) 691.15;transition-delay:var(--dl)}
+.lg{display:flex;flex-direction:column;gap:14px;justify-content:center}
+.lg div{display:flex;align-items:center;gap:12px;font-size:17px;color:#c7d5ee}
+.lg i{width:14px;height:14px;border-radius:4px}
+.lg b{font:700 20px var(--display);color:#fff;margin-left:auto;padding-left:16px}
+/* ---------- lectura de métricas ---------- */
+.read{position:absolute;left:90px;right:90px;top:222px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:290px 290px;gap:24px 26px;perspective:1600px}
+.read .card{height:100%;display:grid;grid-template-columns:200px 1fr;gap:22px;align-items:center;padding:26px 30px}
+.read .big{font:700 58px/1 var(--display);letter-spacing:-.03em;transform:translateZ(40px)}
+.read h3{font-size:22px}
+.read p{font-size:16.5px}
+/* lightbox reduced */
 /* lightbox */
 .browser{cursor:zoom-in}
 #lb{position:fixed;inset:0;z-index:20;display:grid;place-items:center;background:rgba(2,6,14,.88);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
@@ -456,9 +511,30 @@ h2{font-size:52px;line-height:1.06;margin-top:16px;max-width:1300px;
   <div class="sfoot"><span>WAZUH 4.14 · <b>SECURITY INFORMATION &amp; EVENT MANAGEMENT</b></span><span class="pnum">01</span></div>
 </section>
 
+<!-- ===================== EVOLUCIÓN ===================== -->
+<section class="slide sE" data-title="Evolución del proyecto">
+  <div class="kicker rv" style="--d:0">01 · Evolución del proyecto</div>
+  <h2 class="rv" style="--d:1">De la instalación a la operación: cómo evolucionó el proyecto</h2>
+  <div class="evo">
+    <div class="rv flip" style="--d:2"><div class="card tilt"><span class="ph">FASE 1 · 30 OCT</span><h3>Construcción y arquitectura</h3><p>Wazuh 4.14 All-in-One en Ubuntu Server 24.04 (VMware), consola web y flujo de información.</p><div class="chev"><svg viewBox="0 0 24 24"><use href="#i-chev"/></svg></div></div></div>
+    <div class="rv flip" style="--d:3"><div class="card tilt"><span class="ph">FASE 2 · 6 NOV</span><h3>Integración y gestión de logs</h3><p>Dos agentes (Windows 11 y Ubuntu Desktop), primeros eventos, integridad, retención y trazabilidad.</p><div class="chev"><svg viewBox="0 0 24 24"><use href="#i-chev"/></svg></div></div></div>
+    <div class="rv flip" style="--d:4"><div class="card tilt"><span class="ph">FASE 3 · 13 NOV</span><h3>Correlación y detección</h3><p>Tres escenarios, 14 reglas, análisis de casos y un falso positivo; IA de apoyo contrastada con Wazuh.</p><div class="chev"><svg viewBox="0 0 24 24"><use href="#i-chev"/></svg></div></div></div>
+    <div class="rv flip" style="--d:5"><div class="card tilt final"><span class="ph" style="color:#c4b5fd">FINAL</span><h3>Operación y resultados</h3><p>Métricas interpretadas, hallazgos con decisión recomendada y evidencias organizadas.</p></div></div>
+  </div>
+  <div class="card adj rv" style="--d:6">
+    <h3>Ajustes incorporados al integrar las fases</h3>
+    <ul>
+      <li><b>Datos del servidor unificados:</b> Ubuntu Server 24.04 en VMware (el reporte de la Fase 1 mencionaba también 22.04 y VirtualBox).</li>
+      <li><b>Arquitectura ampliada:</b> agentes con IP y flujo de logs (Fase 2) y un tercer escenario de ejecución de procesos con auditoría habilitada en Windows (Fase 3).</li>
+      <li><b>Datos depurados:</b> regla 67027 corregida en la tabla de reglas y conteo aclarado (cada intento fallido en Ubuntu genera 2 alertas).</li>
+    </ul>
+  </div>
+  <div class="sfoot"><span>ALFONSO HERNÁNDEZ LUCIO · <b>PRODUCTO FINAL SIEM</b></span><span class="pnum">02</span></div>
+</section>
+
 <!-- ===================== 2 · ARQUITECTURA ===================== -->
 <section class="slide s2" data-title="Entorno y arquitectura">
-  <div class="kicker rv" style="--d:0">01 · Entorno y arquitectura</div>
+  <div class="kicker rv" style="--d:0">02 · Entorno y arquitectura</div>
   <h2 class="rv" style="--d:1">Un SIEM All-in-One con dos agentes monitoreados</h2>
   <div class="diagram">
     <svg class="flow rv" style="--d:6" viewBox="0 0 1420 600" width="1420" height="600">
@@ -476,13 +552,13 @@ h2{font-size:52px;line-height:1.06;margin-top:16px;max-width:1300px;
     <div class="tcp rv" style="--d:7"><svg viewBox="0 0 24 24"><use href="#i-lock"/></svg>Envío cifrado · TCP 1514</div>
 
     <div class="agent rv left" style="top:20px;--d:2"><div class="card tilt">
-      <div class="top"><div class="ico"><svg><use href="#i-win"/></svg></div><div><h3>Agente Windows</h3><div class="id">PcWindows11 · ID 002</div></div></div>
-      <div class="os">Windows 11 Pro · 60 GB</div>
+      <div class="top"><div class="ico"><svg><use href="#i-win"/></svg></div><div><h3>Agente Windows</h3><div class="id">PcWindows11 · ID 002 · 192.168.46.139</div></div></div>
+      <div class="os">Windows 11 Pro · 2 vCPU · 4 GB · 60 GB</div>
       <div class="chips"><span class="chip">Agente Wazuh</span><span class="chip">Security</span><span class="chip">SCA</span></div>
     </div></div>
     <div class="agent rv left" style="top:320px;--d:3"><div class="card tilt">
-      <div class="top"><div class="ico"><svg><use href="#i-linux"/></svg></div><div><h3>Agente Linux</h3><div class="id">Compu_desktop · ID 001</div></div></div>
-      <div class="os">Ubuntu Desktop 26.04.1 LTS · 60 GB</div>
+      <div class="top"><div class="ico"><svg><use href="#i-linux"/></svg></div><div><h3>Agente Linux</h3><div class="id">Compu_desktop · ID 001 · 192.168.46.138</div></div></div>
+      <div class="os">Ubuntu 26.04.1 LTS · 2 vCPU · 4 GB · 60 GB</div>
       <div class="chips"><span class="chip">Agente Wazuh</span><span class="chip">PAM</span><span class="chip">sudo</span><span class="chip">SCA</span></div>
     </div></div>
 
@@ -499,7 +575,7 @@ h2{font-size:52px;line-height:1.06;margin-top:16px;max-width:1300px;
     </div>
 
     <div class="server rv" style="--d:5"><div class="card tilt">
-      <div class="row"><div class="ico"><svg><use href="#i-server"/></svg></div><div><h3>Servidor Wazuh</h3><div class="mut" style="font-size:15px;margin-top:3px">Ubuntu Server 24.04 · VMware · Wazuh 4.14</div></div></div>
+      <div class="row"><div class="ico"><svg><use href="#i-server"/></svg></div><div><h3>Servidor Wazuh</h3><div class="mut" style="font-size:15px;margin-top:3px">Ubuntu Server 24.04 · VMware · 192.168.46.137 · Wazuh 4.14</div></div></div>
       <div class="specs"><div><b>4</b><span>vCPU</span></div><div><b>8 GB</b><span>RAM</span></div><div><b>200 GB</b><span>SSD</span></div></div>
     </div></div>
 
@@ -508,12 +584,12 @@ h2{font-size:52px;line-height:1.06;margin-top:16px;max-width:1300px;
       <h3>Analista</h3><p>Investiga y responde desde la consola web</p>
     </div></div>
   </div>
-  <div class="sfoot"><span>ALFONSO HERNÁNDEZ LUCIO · <b>PRODUCTO FINAL SIEM</b></span><span class="pnum">02</span></div>
+  <div class="sfoot"><span>ALFONSO HERNÁNDEZ LUCIO · <b>PRODUCTO FINAL SIEM</b></span><span class="pnum">03</span></div>
 </section>
 
 <!-- ===================== 3 · FUENTES Y LOGS ===================== -->
 <section class="slide s3" data-title="Fuentes y gestión de logs">
-  <div class="kicker rv" style="--d:0">02 · Fuentes y gestión de logs</div>
+  <div class="kicker rv" style="--d:0">03 · Fuentes y gestión de logs</div>
   <h2 class="rv" style="--d:1">Dos agentes activos alimentan al SIEM</h2>
   <div style="position:absolute;left:90px;top:215px;width:880px">
     <div class="shotwrap rv left" style="--d:2">
@@ -540,12 +616,12 @@ h2{font-size:52px;line-height:1.06;margin-top:16px;max-width:1300px;
       <pre id="typelog"></pre>
     </div></div>
   </div>
-  <div class="sfoot"><span>ALFONSO HERNÁNDEZ LUCIO · <b>PRODUCTO FINAL SIEM</b></span><span class="pnum">03</span></div>
+  <div class="sfoot"><span>ALFONSO HERNÁNDEZ LUCIO · <b>PRODUCTO FINAL SIEM</b></span><span class="pnum">04</span></div>
 </section>
 
 <!-- ===================== 4 · DETECCIÓN ===================== -->
 <section class="slide s4" data-title="Detección y alertas">
-  <div class="kicker rv" style="--d:0">03 · Detección y alertas</div>
+  <div class="kicker rv" style="--d:0">04 · Detección y alertas</div>
   <h2 class="rv" style="--d:1">Tres escenarios controlados, 14 reglas activadas</h2>
   <div style="position:absolute;left:90px;top:215px;width:850px;display:flex;flex-direction:column;gap:16px">
     <div class="rv left" style="--d:2"><div class="card tilt scen">
@@ -580,30 +656,84 @@ h2{font-size:52px;line-height:1.06;margin-top:16px;max-width:1300px;
       <p><b>Alerta 60154 (nivel 12):</b> Administrators Group Changed, junto con la creación de la cuenta (60109 y 60110)</p>
     </div></div>
   </div>
-  <div class="sfoot"><span>ALFONSO HERNÁNDEZ LUCIO · <b>PRODUCTO FINAL SIEM</b></span><span class="pnum">04</span></div>
+  <div class="sfoot"><span>ALFONSO HERNÁNDEZ LUCIO · <b>PRODUCTO FINAL SIEM</b></span><span class="pnum">05</span></div>
+</section>
+
+<!-- ===================== REGLAS ===================== -->
+<section class="slide sR" data-title="Reglas de detección">
+  <div class="kicker rv" style="--d:0">04 · Detección y alertas</div>
+  <h2 class="rv" style="--d:1">Cada evento del sistema se traduce en una regla y un nivel</h2>
+  <div class="card tblwrap rv" style="--d:2"><table class="tbl">
+    <thead><tr><th style="width:27%">Evento en el equipo</th><th style="width:14%">Regla Wazuh</th><th>Descripción de la regla</th><th style="width:8%">Nivel</th><th style="width:15%">Escenario</th></tr></thead>
+    <tbody><tr><td>Windows · evento 4625 (fallo de inicio de sesión)</td><td class="r">60122</td><td>Logon Failure – Unknown user or bad password</td><td class="r">5</td><td>1 · Autenticación</td></tr><tr><td>Ubuntu · PAM / unix_chkpwd (contraseña incorrecta)</td><td class="r">2501 · 5557</td><td>User authentication failure · Password check failed</td><td class="r">5</td><td>1 · Autenticación</td></tr><tr><td>Windows · evento 4720 (cuenta creada)</td><td class="r">60109 · 60110</td><td>User account enabled or created · User account changed</td><td class="r">8</td><td>2 · Cuentas</td></tr><tr><td>Windows · evento 4732 (miembro agregado a un grupo)</td><td class="r">60170 · 60154</td><td>Users Group Changed (5) · <span class="crit">Administrators Group Changed (12)</span></td><td class="r">5 y <span class="crit">12</span></td><td>2 · Cuentas</td></tr><tr><td>Ubuntu · useradd (usuario y grupo nuevos)</td><td class="r">5902 · 5901</td><td>New user added · New group added to the system</td><td class="r">8</td><td>2 · Cuentas</td></tr><tr><td>Ubuntu · sudo y sesión PAM</td><td class="r">5402 · 5501 · 5502</td><td>Successful sudo to ROOT executed · PAM: Login session opened / closed</td><td class="r">3</td><td>2 y 3 · Sudo</td></tr><tr><td>Windows · evento 4688 (proceso creado)</td><td class="r">67027</td><td>A process was created</td><td class="r">3</td><td>3 · Procesos</td></tr><tr><td>Windows · cambio de política de auditoría</td><td class="r">60112</td><td>Windows Audit Policy changed</td><td class="r">8</td><td>3 · Procesos</td></tr></tbody></table></div>
+  <div class="tnote rv" style="--d:4;top:790px">14 reglas distintas en 4 niveles. Técnicas MITRE ATT&amp;CK asociadas por Wazuh: Password Guessing, Valid Accounts y Sudo and Sudo Caching.</div>
+  <div class="sfoot"><span>ALFONSO HERNÁNDEZ LUCIO · <b>PRODUCTO FINAL SIEM</b></span><span class="pnum">06</span></div>
 </section>
 
 <!-- ===================== 5 · MÉTRICAS ===================== -->
 <section class="slide s5" data-title="Operación del SIEM">
-  <div class="kicker rv" style="--d:0">04 · Operación del SIEM</div>
+  <div class="kicker rv" style="--d:0">05 · Operación del SIEM</div>
   <h2 class="rv" style="--d:1">Métricas: 1,461 eventos en 24 horas con dos agentes</h2>
   <div class="arc">
     <div class="rv flip" style="--d:2"><div class="a1"><div class="card tilt metric"><span class="tag">Volumen</span><div class="n grad" data-count="1461" data-sep="1">0</div><div class="l">eventos en 24 h</div></div></div></div>
-    <div class="rv flip" style="--d:3"><div class="a2"><div class="card tilt metric" style="--glow:rgba(244,63,94,.4)"><span class="tag" style="color:#fda4af">Riesgo</span><div class="n" style="color:#fff;text-shadow:0 0 30px rgba(244,63,94,.6)" data-count="8">0</div><div class="l">fallos de autenticación</div></div></div></div>
+    <div class="rv flip" style="--d:3"><div class="a2"><div class="card tilt metric" style="--glow:rgba(244,63,94,.4)"><span class="tag" style="color:#fda4af">Riesgo</span><div class="n" style="color:#fff;text-shadow:0 0 30px rgba(244,63,94,.6)" data-count="8">0</div><div class="l">alertas de autenticación fallida</div></div></div></div>
     <div class="rv flip" style="--d:4"><div class="a3"><div class="card tilt metric" style="--glow:rgba(45,212,191,.35)"><span class="tag" style="color:#99f6e4">Acceso</span><div class="n" style="color:#fff;text-shadow:0 0 30px rgba(45,212,191,.5)" data-count="24">0</div><div class="l">autenticaciones exitosas</div></div></div></div>
     <div class="rv flip" style="--d:5"><div class="a4"><div class="card tilt metric" style="--glow:rgba(139,92,246,.4)"><span class="tag" style="color:#c4b5fd">Cobertura</span><div class="n grad" data-count="2">0</div><div class="l">agentes activos</div></div></div></div>
   </div>
-  <div class="card authbar rv" style="--d:6">
-    <div class="head"><h3>Autenticaciones registradas en 24 h</h3><span class="mono mut" style="font-size:13px;letter-spacing:.1em">FALLIDAS VS. EXITOSAS</span></div>
-    <div class="row"><span>Exitosas</span><div class="track"><div class="fill ok" style="--w:100%"></div></div><b>24</b></div>
-    <div class="row"><span>Fallidas</span><div class="track"><div class="fill bad" style="--w:33.33%"></div></div><b>8</b></div>
+  <div class="charts">
+    <div class="rv left" style="--d:6"><div class="card tilt chart">
+      <h3>Eventos en 24 horas por fase</h3>
+      <svg viewBox="0 0 640 280" width="100%" height="280">
+        <defs><linearGradient id="gb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7dd3fc"/><stop offset="1" stop-color="#2563eb"/></linearGradient>
+        <linearGradient id="gb2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#38d6ff"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs>
+        <line x1="40" y1="240" x2="620" y2="240" stroke="rgba(130,180,255,.25)"/>
+        <g class="bar3d"><rect x="120" y="199.2" width="130" height="40.8" rx="8" fill="url(#gb)"/><polygon points="120,199.2 250,199.2 268,187.2 138,187.2" fill="#bae6fd" opacity=".55"/><polygon points="250,199.2 268,187.2 268,228 250,240" fill="#1e3a8a" opacity=".8"/></g>
+        <g class="bar3d b2"><rect x="380" y="48.2" width="130" height="191.8" rx="8" fill="url(#gb2)"/><polygon points="380,48.2 510,48.2 528,36.2 398,36.2" fill="#c4b5fd" opacity=".55"/><polygon points="510,48.2 528,36.2 528,228 510,240" fill="#4c1d95" opacity=".8"/></g>
+        <text class="val" x="185" y="185.2" text-anchor="middle">311</text>
+        <text class="val" x="445" y="34.2" text-anchor="middle">1,461</text>
+        <text class="ax" x="185" y="266" text-anchor="middle">Fase 1 (solo servidor)</text>
+        <text class="ax" x="445" y="266" text-anchor="middle">Fases 2 y 3 (con agentes)</text>
+      </svg>
+    </div></div>
+    <div class="rv right" style="--d:7"><div class="card tilt chart">
+      <h3>Reglas activadas por nivel de severidad</h3>
+      <div style="display:grid;grid-template-columns:270px 1fr;gap:20px;align-items:center;margin-top:10px">
+        <svg viewBox="0 0 270 270" width="270" height="270" style="transform:rotate(-90deg)">
+          <circle cx="135" cy="135" r="110" fill="none" stroke="rgba(255,255,255,.05)" stroke-width="42"/>
+          <circle class="seg" cx="135" cy="135" r="110" stroke="#2dd4bf" style="--len:197.47;--dl:1s;stroke-dashoffset:0"/>
+          <circle class="seg" cx="135" cy="135" r="110" stroke="#facc15" style="--len:197.47;--dl:1.2s;stroke-dashoffset:-197.47"/>
+          <circle class="seg" cx="135" cy="135" r="110" stroke="#fb923c" style="--len:246.84;--dl:1.4s;stroke-dashoffset:-394.94"/>
+          <circle class="seg" cx="135" cy="135" r="110" stroke="#f43f5e" style="--len:49.37;--dl:1.6s;stroke-dashoffset:-641.78"/>
+          <g style="transform:rotate(90deg);transform-origin:135px 135px"><text x="135" y="140" text-anchor="middle" class="val" style="font-size:44px">14</text><text x="135" y="170" text-anchor="middle" class="ax">reglas</text></g>
+        </svg>
+        <div class="lg">
+          <div><i style="background:#2dd4bf"></i>Nivel 3<b>4</b></div>
+          <div><i style="background:#facc15"></i>Nivel 5<b>4</b></div>
+          <div><i style="background:#fb923c"></i>Nivel 8<b>5</b></div>
+          <div><i style="background:#f43f5e;box-shadow:0 0 12px #f43f5e"></i>Nivel 12<b>1</b></div>
+        </div>
+      </div>
+    </div></div>
   </div>
-  <div class="sfoot"><span>ALFONSO HERNÁNDEZ LUCIO · <b>PRODUCTO FINAL SIEM</b></span><span class="pnum">05</span></div>
+  <div class="sfoot"><span>ALFONSO HERNÁNDEZ LUCIO · <b>PRODUCTO FINAL SIEM</b></span><span class="pnum">07</span></div>
+</section>
+
+<!-- ===================== LECTURA ===================== -->
+<section class="slide sL" data-title="Lectura de las métricas">
+  <div class="kicker rv" style="--d:0">05 · Operación del SIEM</div>
+  <h2 class="rv" style="--d:1">Qué dicen las métricas sobre la operación del SIEM</h2>
+  <div class="read">
+    <div class="rv flip" style="--d:2"><div class="card tilt" style="--glow:rgba(56,214,255,.45)"><div class="big" style="color:#38d6ff;text-shadow:0 0 30px rgba(56,214,255,.45)">×4.7</div><div><h3>Más visibilidad al integrar agentes</h3><p>Los eventos en 24 h pasaron de 311 (solo servidor) a 1,461 con dos agentes. Más fuentes dan más contexto, pero obligan a filtrar por agente, regla y nivel.</p></div></div></div>
+    <div class="rv flip" style="--d:3"><div class="card tilt" style="--glow:rgba(244,63,94,.45)"><div class="big" style="color:#fb7185;text-shadow:0 0 30px rgba(244,63,94,.45)">1 de 14</div><div><h3>Pocas alertas exigen acción inmediata</h3><p>De las 14 reglas activadas, 4 son de nivel 3, 4 de nivel 5, 5 de nivel 8 y solo 1 de nivel 12. La severidad indica qué revisar primero.</p></div></div></div>
+    <div class="rv flip" style="--d:4"><div class="card tilt" style="--glow:rgba(250,204,21,.4)"><div class="big" style="color:#facc15;text-shadow:0 0 30px rgba(250,204,21,.4)">8 / 24</div><div><h3>Fallos frente a accesos exitosos</h3><p>Lo relevante no es el total sino el ritmo: los fallos llegaron en ráfagas de segundos. Como cada intento en Ubuntu genera 2 alertas, conviene contar intentos y no alertas.</p></div></div></div>
+    <div class="rv flip" style="--d:5"><div class="card tilt" style="--glow:rgba(45,212,191,.4)"><div class="big" style="color:#2dd4bf;text-shadow:0 0 30px rgba(45,212,191,.4)">2 / 2</div><div><h3>Cobertura completa del laboratorio</h3><p>Ambos agentes están activos y envían eventos, así que no hay equipos sin monitoreo. Un agente desconectado debería tratarse como una alerta.</p></div></div></div>
+  </div>
+  <div class="sfoot"><span>ALFONSO HERNÁNDEZ LUCIO · <b>PRODUCTO FINAL SIEM</b></span><span class="pnum">08</span></div>
 </section>
 
 <!-- ===================== 6 · HALLAZGOS ===================== -->
 <section class="slide s6" data-title="Hallazgos de seguridad">
-  <div class="kicker rv" style="--d:0">05 · Hallazgos de seguridad</div>
+  <div class="kicker rv" style="--d:0">06 · Hallazgos de seguridad</div>
   <h2 class="rv" style="--d:1">Cuatro patrones que el SIEM permitió identificar</h2>
   <div class="finds">
     <div class="rv flip" style="--d:2"><div class="card tilt find" style="--c:var(--s5)"><div class="big grad">4 en 34 s</div><div class="bar"></div><p>Intentos fallidos en Ubuntu sobre una misma cuenta: ráfaga detectada con las reglas 2501 y 5557.</p><div class="foot"><span class="chip">2501</span><span class="chip">5557</span></div></div></div>
@@ -615,12 +745,22 @@ h2{font-size:52px;line-height:1.06;margin-top:16px;max-width:1300px;
     <div class="ico"><svg><use href="#i-alert"/></svg></div>
     <p><b>Configuración por revisar:</b> alertas SCA (CIS) en Windows 11 sobre contraseñas y bloqueo de cuenta, y cambio de política de auditoría (regla 60112, nivel 8).</p>
   </div>
-  <div class="sfoot"><span>ALFONSO HERNÁNDEZ LUCIO · <b>PRODUCTO FINAL SIEM</b></span><span class="pnum">06</span></div>
+  <div class="sfoot"><span>ALFONSO HERNÁNDEZ LUCIO · <b>PRODUCTO FINAL SIEM</b></span><span class="pnum">09</span></div>
+</section>
+
+<!-- ===================== DECISIÓN ===================== -->
+<section class="slide sD" data-title="Riesgo y decisión">
+  <div class="kicker rv" style="--d:0">06 · Hallazgos de seguridad</div>
+  <h2 class="rv" style="--d:1">Hallazgos: riesgo, evidencia y decisión recomendada</h2>
+  <div class="card tblwrap rv" style="--d:2"><table class="tbl">
+    <thead><tr><th style="width:29%">Hallazgo</th><th style="width:21%">Riesgo</th><th style="width:15%">Evidencia</th><th>Decisión recomendada</th></tr></thead>
+    <tbody><tr><td><b>Ráfagas de fallos: 4 en 34 s (Ubuntu) y 5 en ~6 s (Windows)</b></td><td>Adivinación de contraseña o fuerza bruta</td><td class="r">2501 · 5557 · 60122</td><td>Regla de correlación por umbral y bloqueo de cuenta tras varios intentos</td></tr><tr><td><b>Cuenta nueva con privilegios de administrador en menos de 1 minuto</b></td><td>Persistencia y escalada de privilegios</td><td class="r">60109 → 60154<br>5902 → 5402</td><td>Aprobar formalmente toda alta en grupos privilegiados y atender el nivel 12 de inmediato</td></tr><tr><td><b>Cambio de política de auditoría junto a creación de procesos</b></td><td>Ocultamiento de actividad</td><td class="r">60112 + 67027</td><td>Tratar todo cambio de auditoría como prioritario y restringir quién puede hacerlo</td></tr><tr><td><b>Windows 11 no cumple controles CIS de contraseñas y bloqueo de cuenta</b></td><td>Vulnerabilidad de configuración que facilita la fuerza bruta</td><td class="r">SCA (CIS)</td><td>Endurecer la política de contraseñas y el bloqueo de cuenta</td></tr><tr><td><b>La alerta de nivel 12 resultó un falso positivo</b></td><td>Reaccionar de más o desatender alertas por fatiga</td><td class="r">60154</td><td>Validar el contexto (hora, agente y cuenta) antes de escalar y documentar las excepciones autorizadas</td></tr></tbody></table></div>
+  <div class="sfoot"><span>ALFONSO HERNÁNDEZ LUCIO · <b>PRODUCTO FINAL SIEM</b></span><span class="pnum">10</span></div>
 </section>
 
 <!-- ===================== 7 · ANÁLISIS ===================== -->
 <section class="slide s7" data-title="Análisis de resultados">
-  <div class="kicker rv" style="--d:0">06 · Análisis de resultados</div>
+  <div class="kicker rv" style="--d:0">07 · Análisis de resultados</div>
   <h2 class="rv" style="--d:1">Del evento a la decisión: qué aporta el SIEM</h2>
   <div class="pipe">
     <div class="rv flip" style="--d:2"><div class="card tilt step"><span class="no">1</span><div class="ico"><svg><use href="#i-radar"/></svg></div><h3>Detectar</h3><p>Reglas que convierten registros crudos en alertas con ID y nivel.</p><div class="arrow"><svg viewBox="0 0 24 24"><use href="#i-arrow"/></svg></div></div></div>
@@ -632,12 +772,12 @@ h2{font-size:52px;line-height:1.06;margin-top:16px;max-width:1300px;
     <div><span class="tag">FALSO POSITIVO</span><h3>Caso del laboratorio</h3></div>
     <p>La alerta <b>60154 (nivel 12)</b> fue una acción planeada y autorizada. El SIEM detectó correctamente el cambio; la hora, el agente y la cuenta permitieron descartar la amenaza. En un entorno real habría que confirmar quién lo hizo y desde qué sesión.</p>
   </div>
-  <div class="sfoot"><span>ALFONSO HERNÁNDEZ LUCIO · <b>PRODUCTO FINAL SIEM</b></span><span class="pnum">07</span></div>
+  <div class="sfoot"><span>ALFONSO HERNÁNDEZ LUCIO · <b>PRODUCTO FINAL SIEM</b></span><span class="pnum">11</span></div>
 </section>
 
 <!-- ===================== 8 · CONCLUSIONES ===================== -->
 <section class="slide s8" data-title="Conclusiones">
-  <div class="kicker rv" style="--d:0">07 · Conclusiones</div>
+  <div class="kicker rv" style="--d:0">08 · Conclusiones</div>
   <h2 class="rv" style="--d:1">Un SIEM convierte registros dispersos en decisiones</h2>
   <div class="card quote rv zoom" style="--d:2"><span class="qm">“</span><p>Una alerta aislada dice poco; <span class="grad">la correlación cuenta la historia completa</span>.</p></div>
   <div class="concl">
@@ -653,24 +793,25 @@ h2{font-size:52px;line-height:1.06;margin-top:16px;max-width:1300px;
       <li><i>3</i>Política formal de retención y respuesta activa</li>
     </ul>
   </div></div>
-  <div class="sfoot"><span>ALFONSO HERNÁNDEZ LUCIO · <b>PRODUCTO FINAL SIEM</b></span><span class="pnum">08</span></div>
+  <div class="sfoot"><span>ALFONSO HERNÁNDEZ LUCIO · <b>PRODUCTO FINAL SIEM</b></span><span class="pnum">12</span></div>
 </section>
 
 <!-- ===================== 9 · EVIDENCIAS ===================== -->
 <section class="slide s9" data-title="Evidencias y enlace">
-  <div class="kicker rv" style="--d:0">08 · Evidencias y enlace</div>
-  <h2 class="rv" style="--d:1">Todo el trabajo, por etapa del proyecto</h2>
+  <div class="kicker rv" style="--d:0">09 · Evidencias y enlace</div>
+  <h2 class="rv" style="--d:1">Evidencias del proyecto, organizadas por fase</h2>
   <div class="card linkcard rv zoom" style="--d:2">
     <div class="ico"><svg><use href="#i-link"/></svg></div>
     <div style="min-width:0"><small>ENLACE DE ACCESO</small><div id="linkslot"></div></div>
   </div>
   <div class="phases">
-    <div class="rv flip" style="--d:3"><div class="p1"><div class="card tilt phase"><span class="ph">FASE 1</span><div class="num grad">01</div><h3>Implementación</h3><p>Instalación de Wazuh, consola web y arquitectura</p><div class="line"><i style="transition-delay:1.2s"></i></div><div class="chev"><svg viewBox="0 0 24 24"><use href="#i-chev"/></svg></div></div></div></div>
-    <div class="rv flip" style="--d:4"><div class="p2"><div class="card tilt phase"><span class="ph">FASE 2</span><div class="num grad">02</div><h3>Recolección de logs</h3><p>Agentes, eventos, integridad y retención</p><div class="line"><i style="transition-delay:1.5s"></i></div><div class="chev"><svg viewBox="0 0 24 24"><use href="#i-chev"/></svg></div></div></div></div>
-    <div class="rv flip" style="--d:5"><div class="p3"><div class="card tilt phase"><span class="ph">FASE 3</span><div class="num grad">03</div><h3>Detección y análisis</h3><p>Escenarios, reglas, correlación e IA de apoyo</p><div class="line"><i style="transition-delay:1.8s"></i></div><div class="chev"><svg viewBox="0 0 24 24"><use href="#i-chev"/></svg></div></div></div></div>
-    <div class="rv flip" style="--d:6"><div class="p4"><div class="card tilt phase final"><span class="ph" style="color:#c4b5fd">FINAL</span><div class="num grad">✦</div><h3>Operación y resultados</h3><p>Métricas, hallazgos y esta presentación</p><div class="line"><i style="transition-delay:2.1s"></i></div></div></div></div>
+    <div class="rv flip" style="--d:3"><div class="p1"><div class="card tilt phase"><span class="ph">FASE 1 · 30 OCT</span><div class="num grad">01</div><h3>Construcción y arquitectura</h3><p>Reporte con instalación, consola web y arquitectura. Carpeta: <span class="mono" style="color:#bdeeff">fase-1</span></p><div class="line"><i style="transition-delay:1.2s"></i></div><div class="chev"><svg viewBox="0 0 24 24"><use href="#i-chev"/></svg></div></div></div></div>
+    <div class="rv flip" style="--d:4"><div class="p2"><div class="card tilt phase"><span class="ph">FASE 2 · 6 NOV</span><div class="num grad">02</div><h3>Integración y gestión de logs</h3><p>Reporte con agentes, eventos, integridad y retención. Carpeta: <span class="mono" style="color:#bdeeff">fase-2</span></p><div class="line"><i style="transition-delay:1.5s"></i></div><div class="chev"><svg viewBox="0 0 24 24"><use href="#i-chev"/></svg></div></div></div></div>
+    <div class="rv flip" style="--d:5"><div class="p3"><div class="card tilt phase"><span class="ph">FASE 3 · 13 NOV</span><div class="num grad">03</div><h3>Correlación y detección</h3><p>Reporte con escenarios, reglas, correlación e IA de apoyo. Carpeta: <span class="mono" style="color:#bdeeff">fase-3</span></p><div class="line"><i style="transition-delay:1.8s"></i></div><div class="chev"><svg viewBox="0 0 24 24"><use href="#i-chev"/></svg></div></div></div></div>
+    <div class="rv flip" style="--d:6"><div class="p4"><div class="card tilt phase final"><span class="ph" style="color:#c4b5fd">FINAL</span><div class="num grad">✦</div><h3>Operación y resultados</h3><p>Presentación en PPTX (carpeta <span class="mono" style="color:#bdeeff">final</span>) y esta versión web.</p><div class="line"><i style="transition-delay:2.1s"></i></div></div></div></div>
   </div>
-  <div class="sfoot"><span>ALFONSO HERNÁNDEZ LUCIO · <b>PRODUCTO FINAL SIEM</b></span><span class="pnum">09</span></div>
+  <div class="tnote rv" style="--d:7;top:792px">El README del repositorio explica qué contiene cada carpeta y cómo respalda la implementación y la operación del SIEM.</div>
+  <div class="sfoot"><span>ALFONSO HERNÁNDEZ LUCIO · <b>PRODUCTO FINAL SIEM</b></span><span class="pnum">13</span></div>
 </section>
 
 </div></div>
@@ -681,7 +822,7 @@ h2{font-size:52px;line-height:1.06;margin-top:16px;max-width:1300px;
   <button id="next" aria-label="Siguiente"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
   <div class="count" id="count"></div>
   <div class="dotsnav" id="dots"></div>
-  <div class="keys"><kbd>←</kbd><kbd>→</kbd> navegar · <kbd>F</kbd> pantalla completa · <kbd>Inicio</kbd>/<kbd>Fin</kbd></div>
+  <div class="keys"><kbd>←</kbd><kbd>→</kbd> navegar · <kbd>1</kbd>–<kbd>9</kbd> saltar · <kbd>F</kbd> pantalla completa · <kbd>Inicio</kbd>/<kbd>Fin</kbd></div>
   <button id="fs" aria-label="Pantalla completa"><svg viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
 </div>
 
@@ -690,7 +831,7 @@ h2{font-size:52px;line-height:1.06;margin-top:16px;max-width:1300px;
    ✏️  PEGA AQUÍ EL ENLACE A TU REPOSITORIO O CARPETA (diapositiva 9)
    Ejemplo: const REPO_URL = "https://github.com/usuario/proyecto-siem";
    ============================================================ */
-const REPO_URL = "https://alfonsohernandezlucio-cpu.github.io/presentacion-siem-wazuh/";
+const REPO_URL = "https://github.com/alfonsohernandezlucio-cpu/presentacion-siem-wazuh";
 
 (function(){
   const stage=document.getElementById('stage');
@@ -800,7 +941,7 @@ const REPO_URL = "https://alfonsohernandezlucio-cpu.github.io/presentacion-siem-
   for(let i=0;i<NP;i++){const y=1-(i/(NP-1))*2,r=Math.sqrt(1-y*y),th=i*2.399963;P.push([Math.cos(th)*r,y,Math.sin(th)*r])}
   const stars=[...Array(120)].map(()=>[Math.random(),Math.random(),Math.random()*1.2+.2,Math.random()]);
   let rot=0,bgTarget=0,gx=.74,gy=.48,gs=1,ga=1;
-  const layouts=[[.74,.46,1.0,1],[.93,.1,.5,.5],[.97,.97,.5,.4],[.98,.98,.5,.4],[.97,.06,.45,.45],[.96,.04,.45,.45],[.02,.98,.5,.4],[.97,.04,.5,.45],[.96,.05,.5,.45]];
+  const layouts=[[.74,.46,1.0,1],[.96,.06,.45,.45],[.93,.1,.5,.5],[.97,.97,.5,.4],[.98,.98,.5,.4],[.97,.06,.4,.35],[.96,.04,.45,.45],[.02,.98,.5,.4],[.97,.04,.45,.45],[.97,.06,.4,.35],[.02,.98,.5,.4],[.97,.04,.5,.45],[.96,.05,.5,.45]];
   function draw(){
     const L=layouts[bgTarget]||layouts[0];
     gx+=(L[0]-gx)*.03;gy+=(L[1]-gy)*.03;gs+=(L[2]-gs)*.03;ga+=(L[3]-ga)*.03;

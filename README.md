@@ -16,7 +16,7 @@ Evidencias del proyecto **implementación y operación de un SIEM con Wazuh**, o
 | [`fase-3/`](fase-3/) | Fase 3 · 13/11/2026 | Reporte de **correlación, detección y análisis de eventos**: tres escenarios controlados, alertas obtenidas, las 14 reglas de detección, relación entre eventos, análisis de casos, patrones, un falso positivo y el apoyo de inteligencia artificial contrastado con Wazuh. | **Detección y análisis:** el SIEM convierte los eventos en alertas priorizadas y, al correlacionarlas, permite interpretar el comportamiento. |
 | [`final/`](final/) | Producto final | **Presentación ejecutiva** en PowerPoint que integra las tres fases: evolución del proyecto, arquitectura, gestión de logs, reglas, métricas interpretadas, hallazgos con decisión recomendada y conclusiones. | **Operación y resultados:** resume cómo opera el SIEM y qué decisiones permite tomar. |
 
-**Versión web interactiva de la presentación:** https://alfonsohernandezlucio-cpu.github.io/presentacion-siem-wazuh/
+**Versión web interactiva de la presentación** (mismo contenido que el PPTX, en la raíz del repositorio como `index.html`): https://alfonsohernandezlucio-cpu.github.io/presentacion-siem-wazuh/
 (Controles: ← → para avanzar, F para pantalla completa y clic en una captura para ampliarla).
 
 ## Resumen del laboratorio
